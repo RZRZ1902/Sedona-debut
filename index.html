@@ -11,7 +11,7 @@
 		  
         <header class="main-header">
             <nav class="main-navigator">
-				<a href="index.html" class="main-header-logo"><img src="image/index_logo.png" width="135" height="70" alt="sity-of-Sedona-logo"></a>
+				<a href="index.html" class="main-header-logo"><img src="image/index_logo.png" width="138" height="70" alt="sity-of-Sedona-logo"></a>
                 <ul>
                     <li class="li-first">
                         <a href="#">информация</a>
@@ -46,7 +46,7 @@
                   <p>седона не аттракцион для туристов,<br> там течет своя жизнь</p>
               </div>
               <div class="block-extended-right">
-                  <img src="./image/block-extended-right.png" width="800" height="258" alt="настоящий городок">
+                  <img src="./image/block-extended-right.png" width="800" height="256" alt="настоящий городок">
               </div>
           </section>
 		  
@@ -70,7 +70,7 @@
 		  
           <section class="block-extended">
               <div class="block-extended-left">
-                  <img src="image/devil-bridge.png" width="800" height="258">
+                  <img src="image/devil-bridge.png" width="800" height="256">
               </div>
               <div class="block-extended-right extended-right-second">
                   <h3 class="block-extended-main">там есть мост дьявола</h3>
@@ -109,10 +109,12 @@
 		      </div>
 			  
 		      <div class="container-form">
-		          <div class="search-map"></div>
+		          <div class="search-map">
+                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3352648.6820868193!2d-114.03634993651035!3d34.854443815496516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1526107752721" width="1200" height="473" frameborder="0" style="border:0" allowfullscreen></iframe>
+                  </div>
                   <div class="search-form">
                       <div class="search-form-title">
-                          <h3>поиск гостинницы в седоне</h3>
+                          <a href="#"><h3>поиск гостинницы в седоне</h3></a>
                       </div>
 					  
                       <form class="search-form-input" action="/echo" method="post">
@@ -170,4 +172,16 @@
         </footer>
 		  
       </div>
+
+      <script>
+
+        var form = document.querySelector(".search-form-title");
+        var formvisible = document.querySelector(".search-form-input");
+
+        form.addEventListener("click", function (event) {
+          event.preventDefault();
+          formvisible.classList.add("search-form_visible");
+        });
+
+      </script>
     </body>
